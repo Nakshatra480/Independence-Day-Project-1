@@ -1174,6 +1174,12 @@ button:hover::after {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
+        margin-bottom: 25px; /* Added spacing between timeline items */
+    }
+    
+    .timeline-content {
+        width: 100%; /* Ensure content takes full width */
+        overflow: visible; /* Prevent content from being cut off */
     }
     
     .timeline-item:nth-child(odd) {
@@ -1271,14 +1277,29 @@ button:hover::after {
 
     .timeline-content {
         padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word; /* Ensure text wraps properly */
     }
-
     .timeline-content h3 {
         font-size: 1rem;
     }
-
     .timeline-content p {
         font-size: 0.8rem;
+    }
+    
+    .timeline-item {
+        padding-left: 50px; /* Reduce left padding to give more space */
+        padding-right: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .timeline::before {
+        left: 25px; /* Adjust the timeline line position */
+    }
+    
+    .timeline-dot {
+        left: 15px; /* Adjust the dot position to match the line */
     }
 
     .message p {
@@ -1346,12 +1367,32 @@ button:hover::after {
     }
 
     .timeline-item {
-        padding-left: 50px;
+        padding-left: 45px;
+        padding-right: 5px;
     }
-
+    
+    .timeline-content {
+        padding: 8px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 0.9rem;
+        margin-bottom: 3px;
+    }
+    
+    .timeline-content p {
+        font-size: 0.75rem;
+        line-height: 1.3;
+    }
+    
+    .timeline::before {
+        left: 22px;
+    }
+    
     .timeline-dot {
         width: 15px;
         height: 15px;
-        left: 24px;
+        left: 14px;
+        top: 12px;
     }
 }
